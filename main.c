@@ -1,10 +1,8 @@
 #include "libft.h"
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-	char	s = 'a';
-	printf("%c\n", ft_tolower(s));
-	printf("%c", ft_toupper(s));
-	return 0;
+    char s[] = "Hello World!";
+    printf("%s\n", ft_strdup(s));
 }
