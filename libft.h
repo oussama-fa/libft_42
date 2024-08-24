@@ -18,7 +18,8 @@ char *ft_strrchr(const char *s, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 int ft_atoi(const char *nptr);
 char    *ft_strdup(const char *s);
-
+size_t  ft_strlcpy(char *dst, const char *src, size_t size);
+char **ft_split(char const *s, char c);
 
 
 #endif
