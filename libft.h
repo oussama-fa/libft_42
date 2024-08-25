@@ -20,6 +20,8 @@ int ft_atoi(const char *nptr);
 char    *ft_strdup(const char *s);
 size_t  ft_strlcpy(char *dst, const char *src, size_t size);
 char **ft_split(char const *s, char c);
+char    *ft_itoa(int n);
+
 
 
 #endif

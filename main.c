@@ -3,8 +3,5 @@
 
 int main()
 {
-    char **s = ft_split("   M 123 M 456 7M89", 'M');
-    while(*s)
-        printf("{%s}\n", *(s++));
-
+    printf("{%s}\n", ft_itoa(124));
 }
