@@ -3,5 +3,5 @@
 
 int main()
 {
-    printf("{%s}\n", ft_itoa(124));
+    printf("{%s}\n", ft_itoa(-1234));
 }

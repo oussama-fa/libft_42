@@ -2,7 +2,9 @@
 
 int    lenght(long nb)
 {
-    int i = 0;
+    int i;
+
+    i = 0;
     if (nb < 0)
         nb *= -1;
     while (nb > 0)
@@ -21,12 +23,16 @@ char    *ft_itoa(int n)
     if (n == 0)
     {
         s = malloc (2);
+        if (!s)
+            return (NULL);
         s = "0";
         return (s);
     }
     else if (num < 0)
     {
         s = malloc (len + 2);
+        if (!s)
+            return (NULL);
         num *= -1;
         s[0] = '-';
         s[len + 1] = '\0';
@@ -34,6 +40,8 @@ char    *ft_itoa(int n)
     else if (num > 0)
     {
         s = malloc (len + 1);
+        if (!s)
+            return (NULL);
         s[len + 1] = '\0';
         len--;
     }
