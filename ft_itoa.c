@@ -17,9 +17,12 @@ static size_t    lenght(long nb)
 
 char    *ft_itoa(int n)
 {
-    long num = n;
-    size_t len = lenght(num);
+    long num;
+    size_t len;
     char    *s;
+    
+    num = n;
+    len = lenght(num);
     if (n == 0)
     {
         s = malloc (2);

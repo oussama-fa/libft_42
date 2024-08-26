@@ -12,6 +12,6 @@ char *ft_strrchr(const char *s, int c)
         len--;
     }
     if (s[len] == c)
-		return (char *)(s + i + 1);
+		return (char *)(s + len + 1);
     return (NULL);
 }

@@ -4,7 +4,8 @@
 
 int main()
 {
-    char s1[] = "HELLO";
-    char s2[] = "HELLo";
-    printf("{%d}\n", ft_strncmp(s1, s2, 5));
+    int nb = 2498;
+    char *s = ft_itoa(nb);
+    while (*s)
+        write(1, s++, 1);
 }
