@@ -1,10 +1,10 @@
 #include "libft.h"
 
-int        ft_countwords(char *str, char c)
+static size_t        ft_countwords(char *str, char c)
 {
-    int    i;
-    int    rst;
-    int    cnt;
+    size_t    i;
+    size_t    rst;
+    size_t    cnt;
 
     i = 0;
     rst = 0;
@@ -23,7 +23,7 @@ int        ft_countwords(char *str, char c)
     return (cnt);
 }
 
-char    *ft_strndup(char *str, size_t n)
+static char    *ft_strndup(char *str, size_t n)
 {
     size_t i = 0;
     char *s;

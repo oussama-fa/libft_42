@@ -1,7 +1,10 @@
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    printf("{%s}\n", ft_itoa(-1234));
+    char s1[] = "HELLO";
+    char s2[] = "HELLo";
+    printf("{%d}\n", ft_strncmp(s1, s2, 5));
 }

@@ -1,8 +1,8 @@
 #include "libft.h"
 
-int    lenght(long nb)
+static size_t    lenght(long nb)
 {
-    int i;
+    size_t i;
 
     i = 0;
     if (nb < 0)
@@ -18,7 +18,7 @@ int    lenght(long nb)
 char    *ft_itoa(int n)
 {
     long num = n;
-    int len = lenght(num);
+    size_t len = lenght(num);
     char    *s;
     if (n == 0)
     {

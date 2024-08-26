@@ -11,5 +11,7 @@ char *ft_strrchr(const char *s, int c)
             return (char *)(s + len);
         len--;
     }
+    if (s[len] == c)
+		return (char *)(s + i + 1);
     return (NULL);
 }
