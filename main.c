@@ -1,12 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/27 17:07:46 by oussama           #+#    #+#             */
+/*   Updated: 2024/08/27 17:08:18 by oussama          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-int main()
+int	main(void)
 {
-	printf("{%s}",  ft_itoa(123));
-	// memset
-	// bzero
-	// memalloc
-	// memcpy
+	printf("%d", ft_isalnum('a'));
 }
