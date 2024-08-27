@@ -23,6 +23,7 @@ char **ft_split(char const *s, char c);
 char    *ft_itoa(int n);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
 char *ft_strnstr(const char *big,	const char *little, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
 
 
 

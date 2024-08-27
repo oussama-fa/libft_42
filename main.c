@@ -4,10 +4,8 @@
 
 int main()
 {
-    const char	*largestring = "Foo Bar	Baz";
-    const char	*smallstring = "Bar";
-    char *ptr;
-
-    ptr = ft_strnstr(largestring,	smallstring, 4);
-    printf("%s", ptr);
+    char	*largestring = NULL;
+    char	*smallstring = "";
+   
+    printf("{%s}",  ft_strjoin(largestring,	smallstring));
 }
