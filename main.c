@@ -4,8 +4,10 @@
 
 int main()
 {
-    int nb = 2498;
-    char *s = ft_itoa(nb);
-    while (*s)
-        write(1, s++, 1);
+    const char	*largestring = "Foo Bar	Baz";
+    const char	*smallstring = "Bar";
+    char *ptr;
+
+    ptr = ft_strnstr(largestring,	smallstring, 4);
+    printf("%s", ptr);
 }

@@ -39,6 +39,12 @@ static char    *ft_strndup(char *str, size_t n)
     s[i] = '\0';
     return (s);
 }
+void    ft_free(char **s, int i)
+{
+    while (s[i])
+        free(s[i++]);
+    free(s);
+}
 
 char **ft_split(char const *s, char c)
 {
@@ -61,8 +67,13 @@ char **ft_split(char const *s, char c)
         while (s[i] != c && (s[i]))
             i++;
         if (i > start)
-            strs[word++] = ft_strndup((char *)s + start, i - start);
+        {
+            strs[word] = ft_strndup((char *)s + start, i - start);
+            if (!strs[word])
+                return (ft_free(strs, word), NULL);
+            word++;
+        }
     }
     strs[word] = NULL;
-    return (char **)(strs);
+    return (strs);
 }
