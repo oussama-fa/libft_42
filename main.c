@@ -4,8 +4,9 @@
 
 int main()
 {
-    char	*largestring = NULL;
-    char	*smallstring = "";
-   
-    printf("{%s}",  ft_strjoin(largestring,	smallstring));
+	printf("{%s}",  ft_itoa(123));
+	// memset
+	// bzero
+	// memalloc
+	// memcpy
 }
