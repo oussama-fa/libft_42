@@ -6,7 +6,7 @@
 /*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 16:47:20 by oussama           #+#    #+#             */
-/*   Updated: 2024/08/27 16:52:54 by oussama          ###   ########.fr       */
+/*   Updated: 2024/08/28 02:47:24 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,37 +30,23 @@ static size_t	lenght(long nb)
 char	*ft_itoa(int n)
 {
 	long	num;
-	size_t	len;
+	int		len;
+	int		flag;
 	char	*s;
 
-	num = n;
-	len = lenght(num);
-	if (n == 0)
-	{
-		s = malloc (2);
-		if (!s)
-			return (NULL);
-		s = "0";
-		return (s);
-	}
+	(1) && (flag = 0, num = n, len = lenght(num));
+	if (!n)
+		return (ft_strdup("0"));
 	else if (num < 0)
-	{
-		s = malloc (len + 2);
-		if (!s)
-			return (NULL);
-		num *= -1;
+		(1) && (len++, flag = 1, num *= -1);
+	s = malloc (len + 1);
+	if (!s)
+		return (NULL);
+	if (flag == 1)
 		s[0] = '-';
-		s[len + 1] = '\0';
-	}
-	else if (num > 0)
-	{
-		s = malloc (len + 1);
-		if (!s)
-			return (NULL);
-		s[len + 1] = '\0';
-		len--;
-	}
-	while (num > 0)
+	s[len] = '\0';
+	len--;
+	while (len >= flag)
 	{
 		s[len] = num % 10 + 48;
 		num /= 10;

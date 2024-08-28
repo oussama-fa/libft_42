@@ -6,7 +6,7 @@
 #    By: oussama <oussama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/27 16:38:44 by oussama           #+#    #+#              #
-#    Updated: 2024/08/27 16:38:49 by oussama          ###   ########.fr        #
+#    Updated: 2024/08/28 00:29:39 by oussama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,22 +24,22 @@ FILES = ft_isalnum.c ft_strjoin.c ft_isalpha.c ft_isascii.c ft_itoa.c ft_strnstr
 		  ft_memchr.c ft_memcmp.c   ft_calloc.c  ft_substr.c \
 		 ft_strtrim.c   ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 
 
-BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
-		ft_lstiter_bonus.c ft_lstmap_bonus.c
+# BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c \
+# 		ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJ = $(FILES:.c=.o)
 
-BONUS_OBJ = $(BONUS:.c=.o)
+# BONUS_OBJ = $(BONUS:.c=.o)
 
-ALL = $(OBJ) $(BONUS_OBJ)
+ALL = $(OBJ) #$(BONUS_OBJ)
 
 all: $(NAME)
 
 $(NAME) : $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-bonus: $(BONUS_OBJ)
-	$(AR) $(NAME) $(BONUS_OBJ)
+# bonus: $(BONUS_OBJ)
+# 	$(AR) $(NAME) $(BONUS_OBJ)
 
 %.o: %.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@
