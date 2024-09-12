@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 17:07:46 by oussama           #+#    #+#             */
-/*   Updated: 2024/09/12 01:58:50 by oussama          ###   ########.fr       */
+/*   Created: 2024/09/05 15:08:35 by oussama           #+#    #+#             */
+/*   Updated: 2024/09/12 02:03:16 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <limits.h>
-#include <unistd.h>
 
-int	main(void)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+		((unsigned char *)s)[i++] = c;
+	return (s);
 }

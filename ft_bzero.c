@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 17:07:46 by oussama           #+#    #+#             */
-/*   Updated: 2024/09/12 01:58:50 by oussama          ###   ########.fr       */
+/*   Created: 2024/09/05 15:08:23 by oussama           #+#    #+#             */
+/*   Updated: 2024/09/05 15:08:57 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <limits.h>
-#include <unistd.h>
 
-int	main(void)
+void	ft_bzero(void *s, size_t n)
 {
-	return (0);
+	ft_memset(s, '\0', n);
 }

@@ -6,7 +6,7 @@
 /*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 16:50:49 by oussama           #+#    #+#             */
-/*   Updated: 2024/08/27 17:06:32 by oussama          ###   ########.fr       */
+/*   Updated: 2024/09/05 15:14:56 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ char	*ft_itoa(int n);
 char	*ft_strnstr(const char *big,	const char *little, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
+// char	*ft_substr(char const *s, unsigned int start, size_t len);
+// char	*ft_strtrim(char const *s1, char const *set);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
