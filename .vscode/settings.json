@@ -4,6 +4,7 @@
 		"libft.h": "c",
 		"math.h": "c",
 		"stdio.h": "c",
-		"head.h": "c"
+		"head.h": "c",
+		"unistd.h": "c"
 	}
 }
