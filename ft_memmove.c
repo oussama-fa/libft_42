@@ -6,7 +6,7 @@
 /*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 02:15:57 by oussama           #+#    #+#             */
-/*   Updated: 2024/09/17 02:37:02 by oussama          ###   ########.fr       */
+/*   Updated: 2024/09/18 02:46:14 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = (unsigned char *) dest;
 	s = (unsigned char *) src;
 	i = n;
+	if (!dest && !src)
+		return (NULL);
 	if (d < s || d >= (s + n))
 		ft_memcpy(d, s, n);
 	else
