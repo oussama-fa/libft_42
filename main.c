@@ -6,7 +6,7 @@
 /*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 17:07:46 by oussama           #+#    #+#             */
-/*   Updated: 2024/09/18 02:37:34 by oussama          ###   ########.fr       */
+/*   Updated: 2024/09/19 04:38:25 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,5 @@
 
 int	main(int ac, char **av)
 {
-	int *ret = ft_memcmp(NULL, NULL, 4);
-	printf("%d", ret);
-	
 	return (0);
 }
-	

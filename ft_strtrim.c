@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 16:43:42 by oussama           #+#    #+#             */
-/*   Updated: 2024/09/17 01:36:50 by oussama          ###   ########.fr       */
+/*   Created: 2024/09/19 06:16:32 by oussama           #+#    #+#             */
+/*   Updated: 2024/09/19 06:16:33 by oussama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	unsigned long long		res;
-	short					sig;
+	char	*ret;
+	size_t	i;
+	size_t	len;
 
-	res = 0;
-	sig = 1;
-	while (*nptr == 32 || (*nptr >= 9 && *nptr <= 13))
-		nptr++;
-	if (*nptr == '+' || *nptr == '-')
-	{
-		if (*nptr == '-')
-			sig *= -1;
-		nptr++;
-	}
-	while (*nptr >= '0' && *nptr <= '9')
-		res = res * 10 + (*(nptr++) - 48);
-	return (res * sig);
+	i = 0;
+	len = ft_strlen(s1);
+	if (!s1 || !set)
+		return (NULL);
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	while (len > i && ft_strchr(set, s1[len]))
+		len--;
+	ret = ft_substr(s1, i, len - i + 1);
+	if (!ret)
+		return (NULL);
+	return (ret);
 }
