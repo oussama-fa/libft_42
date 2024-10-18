@@ -17,17 +17,8 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-int	main(void)
-{
-	int	fd;
 
-	fd = open("output.txt", O_WRONLY | O_CREAT | O_APPEND, 0644);
-	if (fd != -1)
-	{
-		ft_putnbr_fd(-05, fd);
-		close(fd);
-	}
-	else
-		perror("open");
-	return (0);
+int	main(int ac, char **av)
+{
+	printf("Hello World!\n");
 }
