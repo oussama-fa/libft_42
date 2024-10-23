@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oufarah <oufarah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 16:50:49 by oussama           #+#    #+#             */
-/*   Updated: 2024/09/20 01:12:47 by oussama          ###   ########.fr       */
+/*   Created: 2024/10/23 16:57:32 by oufarah           #+#    #+#             */
+/*   Updated: 2024/10/23 17:00:22 by oufarah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
-# include <stdlib.h>
+# include <libc.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -51,13 +50,10 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t n);
 
-typedef struct	s_list
-{
-	void		*content;
-	struct	s_list	*next;
-} t_list;
-
-t_list *ft_lstnew(void *content);
-
+// typedef struct	s_list
+// {
+// 	void		*content;
+// 	struct	s_list	*next;
+// } t_list;
 
 #endif

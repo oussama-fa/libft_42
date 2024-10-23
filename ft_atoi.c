@@ -3,31 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oufarah <oufarah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 16:43:42 by oussama           #+#    #+#             */
-/*   Updated: 2024/09/17 01:36:50 by oussama          ###   ########.fr       */
+/*   Created: 2024/10/22 18:02:07 by oufarah           #+#    #+#             */
+/*   Updated: 2024/10/23 17:08:57 by oufarah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_atoi(const char *str)
 {
-	unsigned long long		res;
-	short					sig;
+	unsigned long	res;
+	int				sig;
 
 	res = 0;
 	sig = 1;
-	while (*nptr == 32 || (*nptr >= 9 && *nptr <= 13))
-		nptr++;
-	if (*nptr == '+' || *nptr == '-')
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		if (*nptr == '-')
+		if (*str == '-')
 			sig *= -1;
-		nptr++;
+		str++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
-		res = res * 10 + (*(nptr++) - 48);
-	return (res * sig);
+	while (*str >= '0' && *str <= '9')
+	{
+		res = res * 10 + (*(str++) - 48);
+		if (res > 9223372036854775807 && sig == -1)
+			return (0);
+		if (res > 9223372036854775807 && sig == 1)
+			return (-1);
+	}
+	return ((int)res * sig);
 }

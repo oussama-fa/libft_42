@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oufarah <oufarah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 16:47:47 by oussama           #+#    #+#             */
-/*   Updated: 2024/08/28 02:02:46 by oussama          ###   ########.fr       */
+/*   Created: 2024/10/22 18:03:39 by oufarah           #+#    #+#             */
+/*   Updated: 2024/10/23 17:01:27 by oufarah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,6 @@ static char	*ft_strndup(char *str, size_t n)
 	return (s);
 }
 
-char	**ft_free(char **s, int i)
-{
-	while (i--)
-		free(s[i]);
-	free(s);
-	return (NULL);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -68,6 +60,8 @@ char	**ft_split(char const *s, char c)
 	int		start;
 	char	**strs;
 
+	if (!s)
+		return (NULL);
 	(1) && (i = 0, word = 0, start = 0);
 	strs = malloc((sizeof(char *)) * (ft_countwords((char *)s, c) + 1));
 	if (!strs)
@@ -80,11 +74,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] != c && (s[i]))
 			i++;
 		if (i > start)
-		{
 			strs[word++] = ft_strndup((char *)s + start, i - start);
-			if (!strs[word - 1])
-				return (ft_free(strs, word - 1));
-		}
 	}
 	strs[word] = NULL;
 	return (strs);

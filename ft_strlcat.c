@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oussama <oussama@student.42.fr>            +#+  +:+       +#+        */
+/*   By: oufarah <oufarah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 16:48:38 by oussama           #+#    #+#             */
-/*   Updated: 2024/08/29 15:30:11 by oussama          ###   ########.fr       */
+/*   Created: 2024/10/22 18:03:53 by oufarah           #+#    #+#             */
+/*   Updated: 2024/10/23 16:59:43 by oufarah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t n)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	i;
 	size_t	dst_len;
 
-	if (!dst && !n)
+	if (!dst && !dstsize)
 		return (ft_strlen(src));
 	i = 0;
 	dst_len = ft_strlen(dst);
-	if (n <= dst_len)
-		return (ft_strlen(src) + n);
-	while (src[i] && (dst_len + i) < n - 1)
+	if (dstsize <= dst_len)
+		return (ft_strlen(src) + dstsize);
+	while (src[i] && (dst_len + i) < dstsize - 1)
 	{
 		dst[dst_len + i] = src[i];
 		i++;
