@@ -6,7 +6,7 @@
 /*   By: oufarah <oufarah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:30:50 by oufarah           #+#    #+#             */
-/*   Updated: 2024/10/24 18:19:01 by oufarah          ###   ########.fr       */
+/*   Updated: 2024/10/26 17:00:26 by oufarah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*tmp;
-
 	if (!lst)
 		return ;
 	if (!*lst)
 		*lst = new;
 	else
-	{
-		tmp = ft_lstlast(*lst);
-		tmp->next = new;
-	}
+		ft_lstlast(*lst)->next = new;
 }

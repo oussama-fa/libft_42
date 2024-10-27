@@ -6,7 +6,7 @@
 /*   By: oufarah <oufarah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:03:39 by oufarah           #+#    #+#             */
-/*   Updated: 2024/10/23 17:01:27 by oufarah          ###   ########.fr       */
+/*   Updated: 2024/10/27 18:18:48 by oufarah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,26 @@ static char	*ft_strndup(char *str, size_t n)
 	return (s);
 }
 
+static char	**free_it(char **s, int i)
+{
+	while (i--)
+		free(s[i]);
+	free(s);
+	return (NULL);
+}
+
+int	ft_split_helper(int *i, char const *s, char c)
+{
+	int	start;
+
+	while (s[*i] == c && (s[*i]))
+		(*i)++;
+	start = *i;
+	while (s[*i] != c && (s[*i]))
+		(*i)++;
+	return (start);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -68,13 +88,13 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (s[i])
 	{
-		while (s[i] == c && (s[i]))
-			i++;
-		start = i;
-		while (s[i] != c && (s[i]))
-			i++;
+		start = ft_split_helper(&i, s, c);
 		if (i > start)
+		{
 			strs[word++] = ft_strndup((char *)s + start, i - start);
+			if (!strs[word - 1])
+				return (free_it(strs, word));
+		}
 	}
 	strs[word] = NULL;
 	return (strs);
