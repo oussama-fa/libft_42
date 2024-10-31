@@ -6,7 +6,7 @@
 /*   By: oufarah <oufarah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:03:31 by oufarah           #+#    #+#             */
-/*   Updated: 2024/10/22 18:03:32 by oufarah          ###   ########.fr       */
+/*   Updated: 2024/10/28 22:52:12 by oufarah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (fd >= 0)
+	if (fd >= 0 && s)
 	{
 		while (*s)
 			write(fd, s++, 1);

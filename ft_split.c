@@ -6,7 +6,7 @@
 /*   By: oufarah <oufarah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:03:39 by oufarah           #+#    #+#             */
-/*   Updated: 2024/10/27 18:45:48 by oufarah          ###   ########.fr       */
+/*   Updated: 2024/10/27 23:47:04 by oufarah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static char	**free_it(char **s, int i)
 	return (NULL);
 }
 
-int	ft_split_helper(int *i, char const *s, char c)
+static int	ft_split_helper(int *i, char const *s, char c)
 {
 	int	start;
 
