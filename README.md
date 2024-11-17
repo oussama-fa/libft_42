@@ -16,6 +16,14 @@ In this project, I implemented various low-level functions that are essential fo
 - Ensure each function is optimized for performance and robust enough to handle edge cases.
 - Expand knowledge of **C programming** and become more comfortable with low-level system programming.
 
+## Screenshots
+
+Here are some screenshots of my project implementation:
+
+<img src="125.png" alt="Project Screenshot 1" width="700"/>
+<img src="corr.png" alt="Project Screenshot 2" width="800"/>
+
+
 ### Key Functions Implemented
 
 This library implements a wide range of functions that can be categorized into several groups:
