@@ -20,7 +20,7 @@ In this project, I implemented various low-level functions that are essential fo
 
 Here are some screenshots of my project implementation:
 
-<img src="125.png" alt="Project Screenshot 1" width="700"/>
+<img src="125.png" alt="Project Screenshot 1" width="500"/>
 <img src="corr.png" alt="Project Screenshot 2" width="800"/>
 
 
