@@ -1,77 +1,100 @@
-# libft_42 - My Own C Standard Library
+# Libft - 42 School Project - 1337 KH
 
 ## Overview
 
-Welcome to **libft_42**! This repository contains my implementation of the **C Standard Library** functions for the **42 -> 1337 KH** curriculum, known as **Libft**. The goal of this project was to recreate several standard C functions from scratch, building a personal and customized library for future projects and exercises within the **42 Network -> 1337 KH**.
+`Libft` is a project from the `42 School`  that involves creating a custom C library containing essential functions from the standard C library. The goal is to reimplement commonly used functions such as those from `<string.h>`, `<stdlib.h>`, and `<ctype.h>`, while improving skills in *memory management*, *pointer manipulation*, and *algorithmic thinking*.
 
-In this project, I implemented various low-level functions that are essential for any C programmer, including memory manipulation, string handling, and utility functions. The objective was not only to understand how these functions work but also to practice writing efficient and clean C code.
+This project helps build a strong foundation in **low-level programming** and prepares for future projects by providing a personal standard library.
 
 ---
-
-
-## Project Goals
-
-- Recreate the core functions of the C Standard Library to better understand their inner workings.
-- Practice efficient memory management, pointer manipulation, and error handling.
-- Ensure each function is optimized for performance and robust enough to handle edge cases.
-- Expand knowledge of **C programming** and become more comfortable with low-level system programming.
 
 ## Screenshots
 
 Here are some screenshots of my project implementation:
 
-<img src="125.png" alt="Project Screenshot 1" width="500"/>
-<img src="corr.png" alt="Project Screenshot 2" width="800"/>
-
-
-### Key Functions Implemented
-
-This library implements a wide range of functions that can be categorized into several groups:
-
-
-1. **Memory Allocation**
-   - `malloc`, `free`, `calloc`
-   - Memory management functions that are essential for dynamic memory allocation.
-
-2. **String Manipulation**
-   - `strlen`, `strcpy`, `strcat`, `strcmp`, `strdup` ...
-   - Essential string functions for working with character arrays.
-
-3. **Character Manipulation**
-   - `isdigit`, `isalpha`, `isprint`, `toupper`, `tolower`
-   - Functions that help check or manipulate individual characters.
-
-4. **Memory**
-	- `memcmp`, `memmove`, `memcpy`, `memchr`, `memset`
-
-5. **Utility Functions**
-   - `atoi`, `itoa`, `strchr`, `strstr` ...
-   - Helper functions for number conversions, searching in strings, and more.
-6. **File Descreptors**
-	- `ft_putchar_fd`, `ft_putstr_fd`, `ft_putnbr_fd` ...
-6. **Linked List Functions**
-   - `lstnew`, `lstadd_front`, `lstadd_back`, `lstsize`, `lstdelone`, `lstclear`, `lstiter`, `lstmap`
-   - Data structure functions to work with singly linked lists.
-
-Each function was implemented with thorough attention to detail, ensuring they mimic the behavior of the corresponding **C Standard Library** function.
+<div align="center">
+  <img src="125.png" alt="125 Successe" width="500"/>
+  <img src="corr.png" alt="MOULINETTE" width="900"/>
+</div>
 
 ---
 
-## License
+### Features
 
-This project is licensed under the **MIT License**. You are free to use, modify, and distribute this library under the terms of the license.
+- A collection of commonly used C functions including:
+
+1. **Memory Allocation**: `ft_calloc` ...
+
+2. **String manipulation**: `ft_strlen`, `ft_strdup`, `ft_strcpy`, `ft_strjoin`, `ft_substr`, `ft_split`, `strchr`, `strnstr`, `strrchr` ...
+
+3. **Character checks**: `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint` ...
+
+4. **Memory functions**: `ft_memset`, `ft_bzero,` `ft_memcpy`, `ft_memmove`, `ft_memcmp`, `ft_memchr` ...
+
+5. **Conversion functions**: `ft_atoi`, `ft_itoa` ...
+
+6. **File Descreptors**: `ft_putchar_fd`, `ft_putstr_fd`, `ft_putnbr_fd` ...
+
+7. **Linked List Functions**: `lstnew`, `lstadd_front`, `lstadd_back`, `lstsize`, `lstdelone`, `lstclear`, `lstiter`, `lstmap` ...
+
+- Each function was implemented with thorough attention to detail, ensuring they mimic the behavior of the corresponding **C Standard Library** function.
+
+- Custom implementations without relying on the standard library.
+
+- Useful for future projects requiring efficient and optimized C functions.
 
 ---
 
-## Acknowledgments
+## How It Works
 
-I would like to thank **42 -> 1337 KH** for providing such an excellent curriculum that challenges me to grow as a programmer. Special thanks to my peers and mentors for their support and feedback throughout the development of this library.
+`Libft` is a static library that provides a collection of fundamental C functions, making it easier to `handle strings`, `memory allocation`, `linked lists`, and more.
 
 ---
 
-## Contact
+## Key Concepts Used:
 
-For any questions, collaborations, or feedback, feel free to reach out to me:
+- **Pointer manipulation** and **memory allocation**.
 
-- [Instagram](https://www.instagram.com/oussama._.farah/)
-- Email: oussama05farah@gmail.com
+- **String** and **character** operations.
+
+- **Linked list** implementation.
+
+- **Efficient function design for better performance**.
+
+---
+
+### Installation and Compilation:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/oussama-fa/libft_42.git
+cd cd libft_42
+```
+
+2. Compile the project:
+
+You must creat a main.c and `#include "libft.h"`
+
+```bash
+make
+```
+
+You find `libft.a`
+
+```bash
+cc main.c libft.a -o programe_name
+```
+
+3. Run the program:
+```bash
+./programe_name
+```
+
+---
+
+## Author
+*Oussama FARAH*
+
+- 📱 **Instagram**: [@oussama._.farah](https://www.instagram.com/oussama._.farah/)
+- ✉️ **Email**: [oussama05farah@gmail.com](mailto:oussama05farah@gmail.com)
